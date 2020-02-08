@@ -14,3 +14,4 @@ class SsenseItem(scrapy.Item):
     title = scrapy.Field()
     price = scrapy.Field()
     url = scrapy.Field()
+    image-thumbnail = scrapy.Field()

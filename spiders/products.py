@@ -20,11 +20,13 @@ class ProductsSpider(scrapy.Spider):
     def parse_detail_page:
         title = response.css('h2::text').extract()[0].strip()
         price = response.css("h3 > span").extract()[0].split()[1]
+        image-thumbnail= response.css("img.product-thumbnail")
 
         item = SsenseItem()
         item['title'] = title
         item['price'] = price
         item['url'] = response.url
+        item['image-thumbnail'] = response.image-thumbnail
         yield item
 
 
